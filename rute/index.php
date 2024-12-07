@@ -16,7 +16,7 @@ session_start();
     </style>
 </head>
 <body>
-
+   
     <h2>Data Rute</h2>
     <?php if (isset($_SESSION['notifikasi'])): ?>
         <p><?php echo $_SESSION['notifikasi']; ?></p>
@@ -29,7 +29,7 @@ session_start();
                     <th>Kota Asal</th>
                     <th>Kota Tujuan</th>
                     <th>Harga</th>
-                    <th><a href="tambah_rute.php">Tambah Data Rute</a></th>
+                  <th><a href="tambah_rute.php">Tambah Data Rute</a></th>
                 </tr>
             </thead>
             <tbody>
