@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Des 2024 pada 10.11
+-- Waktu pembuatan: 14 Des 2024 pada 17.20
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -24,42 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penumpang`
+-- Struktur dari tabel `rutee`
 --
 
-CREATE TABLE `penumpang` (
-  `penumpang_id` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `kontak` varchar(13) DEFAULT NULL
+CREATE TABLE `rutee` (
+  `rute_id` int(11) NOT NULL,
+  `kota_asal` varchar(70) NOT NULL,
+  `kota_tujuan` varchar(70) NOT NULL,
+  `harga` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `penumpang`
+-- Dumping data untuk tabel `rutee`
 --
 
-INSERT INTO `penumpang` (`penumpang_id`, `nama`, `kontak`) VALUES
-(123, 'nisa', '08388185144');
+INSERT INTO `rutee` (`rute_id`, `kota_asal`, `kota_tujuan`, `harga`) VALUES
+(5, 'anambas', 'pulau tujuh', 760000);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `penumpang`
+-- Indeks untuk tabel `rutee`
 --
-ALTER TABLE `penumpang`
-  ADD PRIMARY KEY (`penumpang_id`),
-  ADD UNIQUE KEY `kontak` (`kontak`);
+ALTER TABLE `rutee`
+  ADD PRIMARY KEY (`rute_id`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT untuk tabel `penumpang`
+-- AUTO_INCREMENT untuk tabel `rutee`
 --
-ALTER TABLE `penumpang`
-  MODIFY `penumpang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2346;
+ALTER TABLE `rutee`
+  MODIFY `rute_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

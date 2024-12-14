@@ -7,7 +7,7 @@ if (isset($_GET['id'])){
     $id = $_GET['id'];
 
 
-   $sql ="DELETE FROM rute WHERE rute_id=$id";
+   $sql ="DELETE FROM rutee WHERE rute_id=$id";
    $query = mysqli_query($db, $sql);
 
 

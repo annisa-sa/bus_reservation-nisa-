@@ -35,20 +35,20 @@ session_start();
             <tbody>
                 <?php
                 $no = 1; 
-                $query = $db->query("SELECT * FROM rute");
-                while($rute = $query->fetch_assoc()){
+                $query = $db->query("SELECT * FROM rutee");
+                while($rutee = $query->fetch_assoc()){
                     ?>
          <tr>
                 
         <td><?php echo $no++ ?></td>
-        <td><?php echo $rute['kota_asal'] ?></td>
-        <td><?php echo $rute['kota_tujuan'] ?></td>
-        <td><?php echo $rute['harga'] ?></td>
+        <td><?php echo $rutee['kota_asal'] ?></td>
+        <td><?php echo $rutee['kota_tujuan'] ?></td>
+        <td><?php echo $rutee['harga'] ?></td>
         </td>
         <td align="center">
-<a href="edit_rute.php?id=<?php echo $rute ['rute_id'] ?>">Edit</a>
+<a href="edit_rute.php?id=<?php echo $rutee ['rute_id'] ?>">Edit</a>
  <a onclick="return confirm('Anda yakin ingin menghapus data?')"
-  href="hapus_rute.php?id=<?php echo $rute['rute_id'] ?>">Hapus</a>
+  href="hapus_rute.php?id=<?php echo $rutee['rute_id'] ?>">Hapus</a>
  </td>
                 </tr>
                 <?php

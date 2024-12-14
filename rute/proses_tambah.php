@@ -8,15 +8,15 @@ if (isset($_POST['simpan'])) {
     $harga = $_POST['harga'];
     
   
-    $sql = "INSERT INTO rute
+    $sql = "INSERT INTO rutee
             ( kota_asal, kota_tujuan, harga)
             VALUES ('$kota_asal', '$kota_tujuan', '$harga')";
 
 $query=mysqli_query($db, $sql);
     if ($query) {
-        $_SESSION['notifikasi'] = "Data rute berhasil ditambahkan!";
+        $_SESSION['notifikasi'] = "Data rutee berhasil ditambahkan!";
     } else {
-        $_SESSION['notifikasi'] = "Data rute gagal ditambahkan!";
+        $_SESSION['notifikasi'] = "Data rutee gagal ditambahkan!";
     }
 
     header('Location: index.php');

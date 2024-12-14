@@ -8,7 +8,7 @@ if (isset($_POST['simpan'])) {
     $kota_tujuan = $_POST['kota_tujuan'];
     $harga = $_POST['harga'];
 
-    $sql = "UPDATE rute SET
+    $sql = "UPDATE rutee SET
             kota_asal='$kota_asal',
             kota_tujuan='$kota_tujuan',
             harga='$harga'
@@ -17,9 +17,9 @@ if (isset($_POST['simpan'])) {
     $query=mysqli_query($db, $sql);
 
     if ($query) {
-        $_SESSION['notifikasi'] = "Data rute berhasil diperbarui!";
+        $_SESSION['notifikasi'] = "Data rutee berhasil diperbarui!";
     } else {
-        $_SESSION['notifikasi'] = "Data rute gagal diperbarui!";
+        $_SESSION['notifikasi'] = "Data rutee gagal diperbarui!";
     }
 
    
